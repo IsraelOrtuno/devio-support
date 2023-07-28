@@ -1,0 +1,36 @@
+{
+  "name": "devio/support",
+  "autoload": {
+    "psr-4": {
+      "Devio\\Support\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Devio\\Support\\Tests\\": "tests"
+    }
+  },
+  "authors": [
+    {
+      "name": "Israel Ortuño",
+      "email": "ai.ortuno@gmail.com"
+    }
+  ],
+  "require": {
+    "illuminate/validation": "^10.16",
+    "illuminate/support": "^10.16",
+    "laravel/framework": "^10.16"
+  },
+  "require-dev": {
+    "pestphp/pest": "^2.0",
+    "orchestra/testbench": "^8.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/pest"
+  }
+}
