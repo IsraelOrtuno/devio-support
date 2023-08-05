@@ -45,6 +45,7 @@ abstract class TestCase extends Orchestra
         Schema::create('test_models', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->nullable();
+            $table->json('options')->nullable();
         });
 
         Schema::create('location_models', function (Blueprint $table) {
