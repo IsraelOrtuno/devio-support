@@ -14,8 +14,12 @@ class SupportServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        Collection::macro('pick', function (...$properties) {
+        Collection::macro('select', function (...$properties) {
             return $this->map(fn(array|object $item) => Arr::only((array)$item, $properties));
+        });
+
+        Collection::macro('unselect', function (...$properties) {
+            return $this->map(fn(array|object $item) => Arr::except((array)$item, $properties));
         });
     }
 }
