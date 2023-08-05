@@ -2,6 +2,7 @@
 
 namespace Devio\Support\Tests;
 
+use Devio\Support\SupportServiceProvider;
 use File;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Schema\Blueprint;
@@ -15,6 +16,7 @@ abstract class TestCase extends Orchestra
     {
         parent::setUp();
 
+        $this->app->register(SupportServiceProvider::class);
         $this->setUpDatabase($this->app);
 
         Model::unguard();

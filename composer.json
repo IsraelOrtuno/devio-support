@@ -30,6 +30,13 @@
       "pestphp/pest-plugin": true
     }
   },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Devio\\Support\\SupportServiceProvider"
+      ]
+    }
+  },
   "scripts": {
     "test": "vendor/bin/pest"
   }
